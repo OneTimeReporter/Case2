@@ -1,14 +1,12 @@
 import pandas as pd
-import kaggle
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import numpy as np
-
-api = kaggle.api
-api.get_config_value("username")
+os.environ['KAGGLE_CONFIG_DIR'] = '.kaggle/kaggle.json'
+import kaggle.api
 
 kaggle.api.dataset_download_file("iamsouravbanerjee/gender-inequality-index-dataset", "gender inequality index.csv")
 kaggle.api.dataset_download_file("meeratif/a-worldwide-ranking-of-corruption", "corruption.csv")
