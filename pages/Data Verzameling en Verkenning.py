@@ -5,11 +5,8 @@ import pandas as pd
 import os
 import streamlit as st
 import plotly.express as px
-
-custom_kaggle_config_dir = 'OneTimeReporter/Case2/.kaggle'
-os.environ['KAGGLE_CONFIG_DIR'] = custom_kaggle_config_dir
+os.environ['KAGGLE_CONFIG_DIR'] = '.kaggle/kaggle.json'
 import kaggle
-kaggle.api.authenticate()
 
 st.title("Het verzamelen en verkennen van data.")
 
