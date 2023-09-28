@@ -2,8 +2,8 @@
 # coding: utf-8
 
 import pandas as pd
-import kaggle
 import os
+import kaggle
 import streamlit as st
 import plotly.express as px
 
