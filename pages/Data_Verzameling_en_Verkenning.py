@@ -7,8 +7,7 @@ import os
 import streamlit as st
 import plotly.express as px
 
-api = kaggle.api
-api.get_config_value("username")
+kaggle.api.authenticate(api_key=os.getenv("KAGGLE_API_KEY"))
 
 st.title("Het verzamelen en verkennen van data.")
 
