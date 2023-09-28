@@ -7,31 +7,9 @@ import kaggle
 import streamlit as st
 import plotly.express as px
 
-# URL of your kaggle.json file on GitHub
-kaggle_json_url = "https://raw.githubusercontent.com/OneTimeReporter/Case2/main/kaggle.json"
-
-# Download kaggle.json from GitHub
-response = requests.get(kaggle_json_url)
-
-# Check if the download was successful
-if response.status_code == 200:
-    # Parse the downloaded JSON content
-    kaggle_json = json.loads(response.text)
-    
-    # Set the API key directly
-    kaggle.api.api_key = kaggle_json['api_key']
-else:
-    print("Failed to download kaggle.json from GitHub.")
-
-
 st.title("Het verzamelen en verkennen van data.")
 
-kaggle.api.dataset_download_file("iamsouravbanerjee/gender-inequality-index-dataset", "gender inequality index.csv")
-kaggle.api.dataset_download_file("meeratif/a-worldwide-ranking-of-corruption", "corruption.csv")
-kaggle.api.dataset_download_file("sazidthe1/world-gdp-data", "gdp_data.csv")
 
-if os.path.isfile("Gender_Inequality_Index.csv") == False:
-    os.rename("Gender%20Inequality%20Index.csv", "Gender_Inequality_Index.csv")
 
 
 # Importing of the dataset
