@@ -2,13 +2,14 @@
 # coding: utf-8
 
 import pandas as pd
-import kaggle
 import os
 import streamlit as st
 import plotly.express as px
 
-api = kaggle.api
-api.get_config_value("username")
+custom_kaggle_config_dir = 'OneTimeReporter/Case2/.kaggle'
+os.environ['KAGGLE_CONFIG_DIR'] = custom_kaggle_config_dir
+import kaggle
+kaggle.api.authenticate()
 
 st.title("Het verzamelen en verkennen van data.")
 
