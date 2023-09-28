@@ -7,7 +7,7 @@ import kaggle
 import streamlit as st
 import plotly.express as px
 
-kaggle_json_path = "https://github.com/OneTimeReporter/Case2/blob/main/kaggle.json"  
+kaggle_json_path = "https://raw.githubusercontent.com/OneTimeReporter/Case2/main/kaggle.json"  
 
 # Authenticate using the specified path to kaggle.json
 kaggle.api.authenticate(api_key=kaggle_json_path)
