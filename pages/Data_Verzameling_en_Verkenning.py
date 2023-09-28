@@ -7,10 +7,22 @@ import kaggle
 import streamlit as st
 import plotly.express as px
 
-kaggle_json_path = "https://raw.githubusercontent.com/OneTimeReporter/Case2/main/kaggle.json"  
+# URL of your kaggle.json file on GitHub
+kaggle_json_url = "https://raw.githubusercontent.com/OneTimeReporter/Case2/main/kaggle.json"
 
-# Authenticate using the specified path to kaggle.json
-kaggle.api.authenticate(api_key=kaggle_json_path)
+# Download kaggle.json from GitHub
+response = requests.get(kaggle_json_url)
+
+# Check if the download was successful
+if response.status_code == 200:
+    # Parse the downloaded JSON content
+    kaggle_json = json.loads(response.text)
+    
+    # Set the API key directly
+    kaggle.api.api_key = kaggle_json['api_key']
+else:
+    print("Failed to download kaggle.json from GitHub.")
+
 
 st.title("Het verzamelen en verkennen van data.")
 
