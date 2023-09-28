@@ -2,13 +2,22 @@
 # coding: utf-8
 
 import pandas as pd
+import kaggle
 import os
 import streamlit as st
 import plotly.express as px
 
+        api = kaggle.api
+        api.get_config_value("username")
+
 st.title("Het verzamelen en verkennen van data.")
 
+kaggle.api.dataset_download_file("iamsouravbanerjee/gender-inequality-index-dataset", "gender inequality index.csv")
+kaggle.api.dataset_download_file("meeratif/a-worldwide-ranking-of-corruption", "corruption.csv")
+kaggle.api.dataset_download_file("sazidthe1/world-gdp-data", "gdp_data.csv")
 
+if os.path.isfile("Gender_Inequality_Index.csv") == False:
+    os.rename("Gender%20Inequality%20Index.csv", "Gender_Inequality_Index.csv")
 
 
 # Importing of the dataset
