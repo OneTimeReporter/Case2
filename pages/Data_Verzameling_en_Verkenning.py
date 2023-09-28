@@ -3,7 +3,6 @@
 
 import pandas as pd
 import os
-import kaggle
 import streamlit as st
 import plotly.express as px
 
