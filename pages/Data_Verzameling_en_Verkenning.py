@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 # coding: utf-8
-
+import kaggle
 import pandas as pd
 import os
 import streamlit as st
