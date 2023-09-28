@@ -7,8 +7,10 @@ import kaggle
 import streamlit as st
 import plotly.express as px
 
-os.environ["KAGGLE_USERNAME"] = "tckilic"
-os.environ["KAGGLE_KEY"] = "93cc6199cea35b3d3faa97f84e1e48f3"
+kaggle_json_path = "https://github.com/OneTimeReporter/Case2/blob/main/kaggle.json"  
+
+# Authenticate using the specified path to kaggle.json
+kaggle.api.authenticate(api_key=kaggle_json_path)
 
 st.title("Het verzamelen en verkennen van data.")
 
