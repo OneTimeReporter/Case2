@@ -5,6 +5,7 @@ import streamlit as st
 import requests
 from PIL import Image
 from io import BytesIO
+import kaggle
 
 #NS Logo aanroepen
 response = requests.get("https://blog.vantagecircle.com/content/images/2021/12/gender-inequality-in-the-workplace.jpg")
