@@ -2,13 +2,16 @@
 # coding: utf-8
 
 import pandas as pd
-import kaggle
 import os
 import streamlit as st
 import plotly.express as px
 
-api = kaggle.api
-api.get_config_value("username")
+# Get your Kaggle API credentials from environment variables
+kaggle_username = os.environ.get("tckilic")
+kaggle_key = os.environ.get("93cc6199cea35b3d3faa97f84e1e48f3")
+
+# Authenticate with Kaggle using the credentials
+kaggle.api.authenticate(username=kaggle_username, key=kaggle_key)
 
 st.title("Het verzamelen en verkennen van data.")
 
