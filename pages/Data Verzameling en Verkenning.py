@@ -6,7 +6,7 @@ import os
 import streamlit as st
 import plotly.express as px
 os.environ['KAGGLE_CONFIG_DIR'] = '.kaggle/kaggle.json'
-import kaggle
+import kaggle.api
 
 st.title("Het verzamelen en verkennen van data.")
 
