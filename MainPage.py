@@ -11,7 +11,7 @@ response = requests.get("https://blog.vantagecircle.com/content/images/2021/12/g
 nsheader = Image.open(BytesIO(response.content))
 
 st.title("Case 2 - Gender Inequality Analyse")
-st.subheader("Team 1: Ryan Achternaam, Luuk Koppen, Timo Jansen, Tarik Kiliç")
+st.subheader("Team 1: Ryan Stevens, Luuk Koppen, Timo Jansen, Tarik Kiliç")
 st.image(nsheader, caption="Gender Inequality is een probleem dat wereldwijd geobserveerd kan worden.")
 
 
